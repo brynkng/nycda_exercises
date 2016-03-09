@@ -1,3 +1,5 @@
 <% @posts.each do |post| %>
-<%= post.message %>
+<%= post.message %><br/>
+- <%= post.user.name %>
+<%= link_to 'delete', "/posts/#{post.id.to_s}", method: :delete if session[:user_id] == post.user.id %><br>
 <% end %>

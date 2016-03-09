@@ -1,0 +1,6 @@
+<form action="/admins/login" method="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type='text' name="email"/>
+  <input type='password' name="password"/>
+  <input type='submit'/>
+</form>

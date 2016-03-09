@@ -5,10 +5,12 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
-  get "/login" => "users#login"
+  get "/login" => "users#login_form"
+  post "/login" => "users#login"
   delete "/logout" => "users#logout"
 
-  get "/admins/login" => "admins#login"
+  get "/admins/login" => "admins#login_form"
+  post "/admins/login" => "admins#login"
   delete "admins/logout" => "admins#logout"
   get '/admins' => "admins#index"
 
