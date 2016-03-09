@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :user
   resources :post
-
-
+  get "/login" => "users#login"
+  delete "/logout" => "users#logout"
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
