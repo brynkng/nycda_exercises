@@ -20,6 +20,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:notice] = "You're fired!"
+    else
+      flash[:notice] = "Censorship failed."
+    end
+      redirect_to '/admins'
   end
 
 end

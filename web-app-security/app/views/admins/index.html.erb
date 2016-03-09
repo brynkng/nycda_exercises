@@ -1,12 +1,13 @@
 <% @posts.each do |post| %>
-<%= post.message %>
+<%= post.message %><br>
+<3<%= post.user.name %>
 <br>
-<%= link_to 'delete', destroy_post_path(post), method: :delete %>
+<%= link_to 'delete', "/posts/#{post.id.to_s}", method: :delete %><br>
 <% end %>
 
 <% @users.each do |user| %>
 <%= user.name %>
 <br>
 
-<%= link_to 'delete', destroy_user_path(user), method: :delete %>
+<%= link_to 'delete', "/users/#{user.id.to_s}", method: :delete %>
 <% end %>
