@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "/login" => "users#login"
   delete "/logout" => "users#logout"
 
+  get "/admins/login" => "admins#login"
+  delete "admins/logout" => "admins#logout"
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
