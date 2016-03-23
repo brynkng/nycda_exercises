@@ -15,9 +15,6 @@ RSpec.describe User, type: :model do
       expect(user.first_name).to eq(nil)
     end
 
-    it 'test upper case in initializer' do
-    end
-
   end
 
   context "prefilled user" do
