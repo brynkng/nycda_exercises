@@ -1,0 +1,15 @@
+<section id='home'>
+
+  <div id='container'>
+    <% if current_user %>
+      Welcome <%= current_user.first_name %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      Welcome, please sign in or sign up<br/>
+      <button id='signup-show'>Signup</button>
+      <%= render partial: 'users/signup' %>
+    <% end %>
+
+  </div>
+
+</section>
