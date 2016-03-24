@@ -2,7 +2,7 @@ $(function() {
   //Main codd
 
   setup_signup()
-  // setup_login()
+  setup_login()
 
 
 
@@ -40,5 +40,16 @@ $(function() {
     })
 
   }
+
+  function setup_login() {
+    $('#login-show').click(function() {
+      $('#login').addClass('show')
+    })
+
+    $('#login .close').click(function() {
+      $('#login').removeClass('show')
+    })
+  }
+
 
 })

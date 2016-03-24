@@ -7,7 +7,9 @@
     <% else %>
       Welcome, please sign in or sign up<br/>
       <button id='signup-show'>Signup</button>
+      <button id='login-show'>Log In</button>
       <%= render partial: 'users/signup' %>
+      <%= render partial: 'sessions/login' %>
     <% end %>
 
   </div>
