@@ -1,4 +1,4 @@
-require 'rails_helper'
+i uu.require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
   end
 
   context "prefilled user" do
-    let(:user){ User.new(first_name: 'Bryan', email: 'bryan@bryan.com')}
+    let(:user){ build(:user)}
 
     it 'first name should always be present' do
       user.first_name = nil
